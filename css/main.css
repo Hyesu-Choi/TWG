@@ -1,0 +1,431 @@
+/* 재사용 스타일 */
+.button {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000
+
+}
+.button:hover {
+    background: #fff;
+    color: var(--main-color);
+}
+
+body {
+    padding-top: 80px; 
+    /* header 겹침 해제 */
+}
+
+
+/* 헤더영역 */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+}
+header .trigger {
+    display: none;
+}
+header> nav> ul> li {
+    display: inline-block;
+    position: relative;
+}
+header> nav> ul> li> a {
+    padding: 0 15px;
+    color: #333;
+}
+header> div> ul> li {
+    display: inline-block;
+}
+header> div> ul> li> a {
+    padding: 0 .5rem;
+    font-size: 18px;
+    color: #333;
+}
+.sub {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    background: rgba(255,255,255,0.9);
+    display: none;
+}
+.sub>li { 
+    padding: .6rem; 
+    width:max-content; 
+}
+.sub>li>a { 
+    color: #333;
+}
+
+header > div > ul > li:first-child { position: relative; }
+.my-sub { 
+    position: absolute; 
+    top: 51px; 
+    left: 0; 
+    background:rgba(255,255,255,0.9);
+    display: none;
+}
+.my-sub > li {
+    padding: .6rem;
+    width: max-content;
+}
+.my-sub>li>a {
+    color: #333;
+}
+
+/* 메인이미지 */
+section.mainImg {
+    width: 100%;
+}
+.mainImg img {
+    width: 100%;
+    min-height: 500px;
+}
+
+/* 배너 */
+.banner {
+    width: 100%;
+    padding: 8rem 10%;
+    text-align: center;
+}
+.banner .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 2rem;
+}
+.banner .grid-container div { position: relative;}
+.banner .grid-container div img {
+    width: 100%;
+}
+.banner .grid-container div img:hover {
+    opacity: 0.5;
+}
+.banner .grid-container h3 {
+    padding: 2rem 0 1rem;
+    font-size: 19px;
+}
+.banner .grid-container p {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    color: #313030;
+}
+.banner .grid-container .btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    margin: 0 10%;
+    padding: 10px 0;
+    border: 1px solid #555;
+    color: #555;
+    box-shadow: 1px 1px 1px #333;
+}
+.banner .grid-container .btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* 베스트 티 */
+.bestTea, .newArrival, .sale {
+    width: 100%;
+    padding: 8rem 10%;
+    text-align: center;
+}
+.bestTea h2, .newArrival h2, .sale h2 {
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    padding: 1rem 0;
+}
+.best-grid-container, .new-grid-container, .sale-grid-container  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+}
+.best-grid-container div, .new-grid-container div, .sale-grid-container div {
+    position: relative;
+}
+.best-grid-container div:hover .changeImg, .new-grid-container div:hover .changeImg, .sale-grid-container div:hover .changeImg { display: block;}
+.best-grid-container img, .new-grid-container img, .sale-grid-container img { width: 100%;}
+.best-grid-container .changeImg, .new-grid-container .changeImg, .sale-grid-container .changeImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.best-grid-container p:last-child {
+    display: inline-block;
+    padding: .3rem .6rem;
+    background: rgb(92, 177, 211);
+    color: #fff;
+}
+
+/* 티 레시피 */
+.teaRecipe {
+    width: 100%;
+    padding: 5rem 20%;
+    background: #f4f2e1;
+}
+.teaRecipe h2 {
+    font-size: 1.8rem;
+    text-align: left;
+    padding: 2rem 0;
+}
+.recipe-fiex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recipe-fiex-container div:first-child {
+    margin-right: 2rem;
+}
+.recipe-fiex-container h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+.recipe-fiex-container h3, p {
+    padding: .5rem 0;
+}
+.recipe-fiex-container .btn {
+    width: 35%;
+    margin-top: 2.5rem;
+    padding: 10px 0;
+    border: 1px solid #555;
+    color: #555;
+    text-align: center;
+    box-shadow: 1px 1px 2px #333;
+}
+.recipe-fiex-container .btn:hover {
+background: #333;
+color: #fff;
+}
+
+
+/* New  Arrivals  */
+
+.new-grid-container span, .sale-grid-container span {
+    display: inline-block;
+    padding: .2rem .4rem;
+}
+.new-grid-container span {
+background: rgb(92, 177, 211);
+color: #fff;
+}
+.new-grid-container span.soldout, .sale-grid-container span.soldout {
+    margin-right: .5rem;
+    background: rgb(133, 63, 36);
+    border: none;
+    color: #fff;
+}
+
+/* SALE  */
+.sale-grid-container p {
+    padding: 0.5rem 0;
+}
+.sale .sale-grid-container div p:nth-child(4) {
+    color: rgb(92, 177, 211);
+    text-decoration: line-through;
+}
+.sale-grid-container span {
+    border: .05rem solid red;
+    color: red;
+}
+
+
+/* FOOTER  */
+footer {
+    width: 100%;
+    padding: 8rem 10%;
+}
+footer div:first-child {
+    border-top: .05rem solid #888;
+    border-bottom: .05rem solid #888;
+}
+footer div:first-child ul li {
+    display: inline-block; 
+}
+    
+footer div:first-child ul li a {
+    padding: 1.2rem 1.7rem 1.2rem 0;
+    color: #333;
+    font-weight: bold;
+}
+footer div:nth-child(2) {
+    padding: 4rem 0;
+    border-bottom: .05rem solid #888;
+}
+footer div:nth-child(2) > ul {
+    display: flex;
+    justify-content:space-between;
+}
+footer div:nth-child(2) > ul > li {
+    font-weight: bold;
+}
+footer div:nth-child(2) > ul > li > ul > li {
+    padding: .3rem 0;
+    color: #888;
+}
+footer div:last-child p {
+    padding-top: 3rem;
+}
+
+/* 스크롤 버튼 */
+.scrollButtonBox {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+.scrollToTop {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 1.8rem;
+    color: rgb(194, 194, 194);
+    font-size: .8rem;
+    border: .1rem solid rgb(194,194,194);
+    border-radius: .3rem;
+}
+.scrollTop { margin-bottom: .4rem;}
+
+@media (max-width:1024px) {
+    header {
+        justify-content: space-between;
+       padding: 0 5%;
+   }
+   header .trigger {
+       display: block;
+       width: 2rem;
+       height: .8rem;
+       position: relative;
+   }
+   header .trigger span {
+       transition: all .4s ease-in;
+   }
+   header .trigger span:first-child {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: .1rem;
+       background: #333;
+   }
+   header .trigger span:nth-child(2) {
+       position: absolute;
+       top: 50%;
+       left: 0;
+       width: 80%;
+       height: .1rem;
+       background: #333;
+   }
+   header .trigger span:last-child {
+       position: absolute;
+       top: 100%;
+       left: 0;
+       width: 100%;
+       height: .1rem;
+       background: #333;
+   }
+
+   
+
+   header nav {
+       position: fixed;
+       top: 80px;
+       left: 0;
+       width: 100%;
+       padding: 3rem 0;
+       background: #fff;
+       display: none;
+   }
+   header> nav> ul> li {
+    display: block; 
+    text-align: center;
+    position: relative;
+    }
+    header> nav> ul> li > a {
+        padding: 1rem 0;
+        width: 50%;
+        margin: 0 auto;
+    }
+    header> nav> ul> li:hover > a {
+        color: brown;
+        font-weight: bold;
+    }
+
+    header .trigger.active span:first-child {
+        transform: rotate(45deg);
+    }
+    header .trigger.active span:nth-child(2) {
+        display: none;
+    }
+    header .trigger.active span:last-child {
+        transform: translateY(-.8rem) rotate(-45deg);
+    }
+    header nav.active {
+        display: block;
+    }
+
+
+    .sub {
+        position: initial;
+        display: block;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .sub > li {
+        width: 100%;
+    }
+    .sub > li:hover > a {
+        color: brown;
+    }
+
+    header div ul li:first-child, header div ul li:last-child { display: none;
+    }
+
+}
+
+@media (max-width:768px) {
+    .banner, .bestTea, .newArrival, .sale {
+        padding: 8rem 10%;
+    }
+    .teaRecipe {
+        padding: 5rem 8%;
+    }
+    .recipe-fiex-container {
+        flex-direction: column;
+    }
+    .recipe-fiex-container div:first-child {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    footer div:nth-child(2) > ul {
+        flex-direction: column;
+    }
+    footer div:nth-child(2) > ul > li {
+        padding-bottom: 2rem;
+    }
+    footer div:last-child p {
+        width: 95%;
+    }
+
+
+}
+
+@media (max-width:375px) {
+    .bestTea h2, .newArrival h2, .sale h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
